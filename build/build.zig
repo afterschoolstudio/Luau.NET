@@ -27,6 +27,6 @@ pub fn build(b: *std.Build) void {
         .file = .{ .path = "luau.c" },
         .flags = &[_][]const u8{},
     });
-    b.lib_dir = "./out";
+    b.lib_dir = "../Luau.NET.Test/lib";
     b.installArtifact(lib);
 }

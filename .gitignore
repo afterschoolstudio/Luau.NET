@@ -2,3 +2,7 @@
 build/zig-cache/
 
 build/out/
+
+Luau.NET.Test/bin/
+
+Luau.NET.Test/obj/

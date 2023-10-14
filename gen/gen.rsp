@@ -21,4 +21,4 @@ gen.h
 --methodClassName
 Luau
 --output
-Luau.cs
+../Luau.NET.Test/bindings/Luau.cs
