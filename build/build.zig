@@ -20,9 +20,6 @@ pub fn build(b: *std.Build) void {
     });
     lib.linkLibC();
     
-    // const csources = [_][]const u8 {
-    //     "stb.c"
-    // };
     lib.addCSourceFile(.{
         .file = .{ .path = "luau.c" },
         .flags = &[_][]const u8{},
