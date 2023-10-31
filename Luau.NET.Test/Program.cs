@@ -85,7 +85,6 @@ unsafe
     while (run)
     {
         status = Luau.Luau.lua_resume(L, null, 0);
-        Console.WriteLine((Luau.lua_Status)status);
         switch ((Luau.lua_Status)status)
         {
             case lua_Status.LUA_ERRRUN:
@@ -110,7 +109,6 @@ static unsafe int Print(Luau.lua_State* L)
     for (int i = 1; i <= nargs; i++)
     {
         if (Luau.Luau.lua_isstring(L, i) == 1) {
-            /* Pop the next arg using lua_tostring(L, i) and do your print */
             var s = Luau.Luau.macros_lua_tostring(L, i);
             Console.WriteLine(Marshal.PtrToStringAnsi((IntPtr)s));
         }
@@ -128,7 +126,6 @@ static unsafe int Print(Luau.lua_State* L)
                     Console.WriteLine(n);
                     break;
             }
-            /* Do something with non-strings if you like */
         }
     }
     return 0;
