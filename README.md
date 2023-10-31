@@ -6,7 +6,7 @@ demonstrates:
 * function binding between luau/c#
 * no marshalled bindings (fast!)
 
-i don't know anything about luau but will happily work with other people to make this better
+i don't know anything about luau (or really even lua) but will happily work with other people to make this better
 
 the script will "fail" due to errors in the script, but that's the point.
 expected output:
