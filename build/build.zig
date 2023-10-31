@@ -28,6 +28,7 @@ pub fn build(b: *std.Build) void {
     var luacode_api_flag = if (lib.target.isWindows()) "-DLUA_API=extern\"C\" __declspec(dllexport) " else "-DLUACODE_API=extern\"C\"";
     lib.addCSourceFiles(&[_][]const u8{
         // "defines.cpp"
+        "./include/additional.cpp",
   
         "../luau/Ast/src/Ast.cpp",
         "../luau/Ast/src/Confusables.cpp",
@@ -166,6 +167,7 @@ pub fn build(b: *std.Build) void {
     lib.addIncludePath(.{ .path = "../luau/VM/include" });
     lib.addIncludePath(.{ .path = "../luau/VM/src" });
     lib.addIncludePath(.{ .path = "../luau/Common/include" });
+    lib.addIncludePath(.{ .path = "./include" });
 
     // lib.addIncludePath(.{ .path = "/Library/Developer/CommandLineTools/usr/include/c++/v1" });
     b.lib_dir = "../Luau.NET.Test/lib";

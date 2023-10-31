@@ -19,6 +19,7 @@ lib/luau
 ../luau/Compiler/include/luacode.h
 ../luau/VM/include/lua.h
 ../luau/VM/include/lualib.h
+../build/include/additional.h
 --file
 gen.h
 --methodClassName

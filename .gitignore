@@ -6,3 +6,5 @@ build/out/
 Luau.NET.Test/bin/
 
 Luau.NET.Test/obj/
+
+.DS_Store
